@@ -61,7 +61,30 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <h1>안녕하세요 조준혁입니다랑어.</h1>
+    <!-- 항상 화면을 100% 로 사용하면, 와이드 스크린에서 웹페이지가 기대와 달리 보일 수 있음 -->
+
+    <!-- header 에 상단 메뉴까지 넣을 예정 -->
+    <!-- 전체 layout 는 시멘틱 태그로 구성하고,
+      각 layout component 는 width를 100% 로 하되,
+      해당 component 에 들어가는 요소들은 특정 가로 사이즈 이상에서는 특정 사이즈로 가운데에 정렬되도록,
+      inner 클래스로 감싸주기로 함
+      각 하부 요소 배치를 위해서는 각 layout 별 container 로 정의해주기로 함
+    -->
+    <header>
+      <div class="inner">
+        <div class="head-container">
+          <div class="head-brand">
+            <a href="https://www.naver.com">네이버가기</a>
+          </div>
+          <div class="head-blog"><a href="http://fmkorea.com">펨코가기</a></div>
+        </div>
+      </div>
+    </header>
+    <!-- 한 라인씩 내용을 넣을 예정 -->
+    <section></section>
+    <!-- footer 를 넣을 예정-->
+    <footer></footer>
+
     <!-- <script src="js/main.js"></script> -->
   </body>
 </html>
