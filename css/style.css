@@ -34,6 +34,7 @@ a:hover {
   width: 100%; /* 가로 사이즈가 1200px 넘는 해상도에서는 max-width 설정 */
   height: 100%; /* align-items 등으로 수직 가운데 정렬을 위해, 알맞은 height 설정이 필요함 */
   margin: 0 auto; /* 가운데 정렬: 동일 요소에 width 가 설정되어 있을 때에만 적용 */
+  padding: 0 2rem;
 }
 
 header {
@@ -56,24 +57,68 @@ header {
 
 /* 필요시 세부 설정을 위해, 상단 좌측 브랜드만을 별도로 클래스로 정의 */
 .head-container .head-brand {
+  color: green;
   font-weight: bold;
   font-size: 1.2em;
 }
 
 .head-container .head-brand a:hover {
   color: red;
-  cursor: pointer;
+  cursor: help;
 }
 
 /* 필요시 세부 설정을 위해, 상단 우측 메뉴만을 별도로 클래스로 정의 */
 .head-container .head-blog {
   font-weight: bold;
   font-size: 1.2em;
+  color: blue;
 }
 
 .head-container .head-blog a:hover {
   color: #2186c4;
   cursor: pointer;
+}
+
+section {
+  width: 100%;
+  background-color: aliceblue;
+  position: relative;
+}
+
+.main {
+  height: 360px;
+  background-image: url("img/images.png");
+  background-size: cover;
+  background-position: center 10%;
+  z-index: 1;
+}
+
+/* 배경 이미지에 색상을 어둡게 하기 위해, 어두운 색상으로 이미지 상위에 투명도를 주어 덮어씌움 */
+.main-container {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(47, 48, 89);
+  opacity: 0.8;
+  z-index: 2;
+  margin-top: 60px; /* position 이 fixed 일 경우, 문서 흐름에서 빠지므로, 이 부분은 margin 으로 적용 */
+}
+
+.title-container {
+  padding-top: 100px;
+  padding-botton: 100px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  margin-botton: 0.8rem;
+}
+.message {
+  font-size: 1.4rem;
+  font-weight: normal;
+  color: #fff;
+  line-height: 2rem;
 }
 
 @media only screen and (min-width: 1200px) {
