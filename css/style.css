@@ -140,6 +140,7 @@ section {
 .skill-icon {
   font-size: 2.5rem;
   margin: 0 10px;
+  color: black;
 }
 .skill-title {
   display: flex;
