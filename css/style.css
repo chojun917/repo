@@ -147,9 +147,23 @@ section {
   flex-direction: column;
   align-content: center;
 }
+.skill-name {
+  font-weight: bold;
+  color: brown;
+  margin-bottom: 0.1rem;
+}
+.skill-usage {
+  font-weight: bold;
+  color: aquamarine;
+}
 
 @media only screen and (min-width: 1200px) {
   .inner {
     max-width: 1200px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .skill-container {
+    display: none;
   }
 }
