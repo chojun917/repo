@@ -135,7 +135,7 @@ section {
   border-radius: 9px;
   padding: 0.5rem 1rem;
   margin: 0 1rem;
-  box-shadow: 10px 10px 10px -5px rgba(25, 42, 70, 0.2);
+  box-shadow: 10px 10px 10px -5px aqua;
 }
 .skill-icon {
   font-size: 2.5rem;
@@ -154,9 +154,68 @@ section {
 }
 .skill-usage {
   font-weight: bold;
-  color: aquamarine;
+  color: black;
 }
-
+.roadmap-container {
+  width: 100%;
+  margin-top: 2rem;
+}
+.roadmap-title-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.roadmap-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: gold;
+}
+.slide-prev {
+  font-size: 2rem;
+  cursor: pointer;
+}
+.slide-next {
+  font-size: 2rem;
+  cursor: pointer;
+}
+.arrow-container {
+  display: flex;
+}
+.class-list {
+  display: flex;
+  list-style: none;
+}
+.class-card {
+  width: 240px;
+  box-shadow: 10px 10px 10px -5px aqua;
+  border-radius: 8px;
+  margin: 0 10px;
+}
+.class-image {
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  height: 150px;
+}
+.class-container {
+  width: 100%;
+  padding: 0.5rem 1rem 1rem 1rem;
+}
+.class-skill {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+.class-type {
+  font-size: 0.9rem;
+  color: #949393;
+}
+.class-format {
+  font-size: 0.9rem;
+  color: #949393;
+  background-color: #0d47a1;
+  padding: 0.2rem;
+}
 @media only screen and (min-width: 1200px) {
   .inner {
     max-width: 1200px;
