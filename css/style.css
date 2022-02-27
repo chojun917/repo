@@ -81,7 +81,7 @@ header {
 
 section {
   width: 100%;
-  background-color: red;
+  background-color: white;
   position: relative;
 }
 
@@ -185,6 +185,9 @@ section {
 .class-list {
   display: flex;
   list-style: none;
+  padding: 0;
+  margin: 1rem 0 0 0;
+  overflow: hidden;
 }
 .class-card {
   width: 240px;
@@ -193,7 +196,7 @@ section {
   margin: 0 10px;
 }
 .class-image {
-  width: 100%;
+  width: 240px;
   border-radius: 8px 8px 0 0;
   height: 150px;
 }
@@ -215,6 +218,24 @@ section {
   color: #949393;
   background-color: #0d47a1;
   padding: 0.2rem;
+}
+.class-desc {
+  width: 100;
+  margin-top: 0.2rem;
+  color: blue;
+}
+.class-title {
+  font-weight: bold;
+  color: black;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 0.5rem;
+}
+.class-detail {
+  font-size: 0.9rem;
+  color: black;
 }
 @media only screen and (min-width: 1200px) {
   .inner {
