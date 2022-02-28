@@ -136,6 +136,10 @@ section {
   padding: 0.5rem 1rem;
   margin: 0 1rem;
   box-shadow: 10px 10px 10px -5px aqua;
+  transition: 0.4s;
+}
+.skill:hover {
+  transform: translate(0, -5px);
 }
 .skill-icon {
   font-size: 2.5rem;
@@ -194,6 +198,11 @@ section {
   box-shadow: 10px 10px 10px -5px aqua;
   border-radius: 8px;
   margin: 0 10px;
+  transition: 0.4s;
+}
+.class-card:hover {
+  box-shadow: 10px 10px 0px -5px aqua;
+  transform: translate(0, 5px);
 }
 .class-image {
   width: 240px;
