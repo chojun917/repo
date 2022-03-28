@@ -87,7 +87,7 @@ section {
 
 .main {
   height: 360px;
-  background-image: url("img/images.png");
+  background-image: url("https://rawcdn.githack.com/chojun917/repo/65d026e3abc4293749679c5069fe01f01e1fbd98/img/images.png");
   background-size: cover;
   background-position: center 10%;
   z-index: 1;
@@ -246,6 +246,36 @@ section {
   font-size: 0.9rem;
   color: black;
 }
+#backtotop {
+  background-color: rgb(47.48.89);
+  width: 40px;
+  height: 40px;
+  text-align: center;
+
+  border-radius: 20px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition-property: background-color, opacity, visibility;
+  transition-duration: 0.3s, 0.5s, 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 999;
+}
+
+#backtotop::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-size: 1.5rem;
+  line-height: 40px;
+  color: #fff;
+}
+#backtotop.show {
+  opacity: 1;
+  visibility: visible;
+  background-color: rgb(47, 48, 49);
+}
+
 @media only screen and (min-width: 1200px) {
   .inner {
     max-width: 1200px;
