@@ -23,7 +23,7 @@ function transformPrev(event) {
   const slidePrev = event.target;
   const slideNext = slidePrev.nextElementSibling;
 
-  const classList = slidePrev.parentElement.nextElementSibling;
+  const classList = slidePrev.parentElement.parentElement.nextElementSibling;
   let activeLi = classList.getAttribute("data-position");
   const liList = classList.getElementsByTagName("li");
 
