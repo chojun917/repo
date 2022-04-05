@@ -35,6 +35,7 @@ a:hover {
   height: 100%; /* align-items 등으로 수직 가운데 정렬을 위해, 알맞은 height 설정이 필요함 */
   margin: 0 auto; /* 가운데 정렬: 동일 요소에 width 가 설정되어 있을 때에만 적용 */
   padding: 0 2rem;
+  overflow: hidden;
 }
 
 header {
@@ -178,10 +179,12 @@ section {
 .slide-prev {
   font-size: 2rem;
   cursor: pointer;
+  color: rgb(47, 48, 89);
 }
 .slide-next {
   font-size: 2rem;
   cursor: pointer;
+  color: #cfd8dc;
 }
 .arrow-container {
   display: flex;
@@ -189,9 +192,9 @@ section {
 .class-list {
   display: flex;
   list-style: none;
-  padding: 0;
-  margin: 1rem 0 0 0;
-  overflow: hidden;
+  padding: 1rem 0;
+  margin: 0;
+  overflow: none;
 }
 .class-card {
   width: 240px;
@@ -308,6 +311,27 @@ footer {
 #backtotop.show:hover {
   background-color: blue;
   cursor: pointer;
+}
+.slide-prev {
+  font-size: 2rem;
+  cursor: pointer;
+  color: rgb(47, 48, 89);
+}
+
+.slide-next {
+  font-size: 2rem;
+  cursor: pointer;
+  color: #cfd8dc;
+}
+
+.slide-prev-hover:hover {
+  transition: transform 0.5s;
+  transform: translateX(-2px);
+}
+
+.slide-next-hover:hover {
+  transition: transform 0.5s;
+  transform: translateX(2px);
 }
 
 @media only screen and (min-width: 1200px) {

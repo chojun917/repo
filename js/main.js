@@ -35,7 +35,7 @@ function transformPrev(event) {
   }
 
   classList.style.transition = "transform 1s";
-  classList.style.transform = "translateX(" + String(activeLi) + "px)";
+  classList.style.transform = "translateX(" + Number(activeLi) + "px)";
   classList.setAttribute("data-position", activeLi);
 }
 
