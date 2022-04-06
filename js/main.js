@@ -19,6 +19,32 @@ function moveBackToTop() {
 window.addEventListener("scroll", checkScroll);
 backToTop.addEventListener("click", moveBackToTop);
 
+function transformNext(event) {
+  const slideNext = event.target;
+  const slidePrev = slideNext.previousElementSibling;
+
+  const classList = slideNext.parentElement.parentElement.nextElementSibling;
+  let activeLi = classList.getAttribute("data-position");
+  const liList = classList.getElementsByTagName("li");
+
+  if (Number(activeLi) < 0) {
+    activeLi = Number(activeLi) + 260;
+
+    slidePrev.style.color = "#2f3059";
+    slidePrev.classList.add("slide-prev-hover");
+    slidePrev.addEventListener("click", transformPrev);
+  }
+  if (Number(activeLi) === 0) {
+    slideNext.style.color = "green";
+    slideNext.classList.remove("slide-next-hover");
+    slideNext.removeEventListener("click", transformNext);
+  }
+
+  classList.style.transition = "transform 1s";
+  classList.style.transform = "translateX(" + String(activeLi) + "px)";
+  classList.setAttribute("data-position", activeLi);
+}
+
 function transformPrev(event) {
   const slidePrev = event.target;
   const slideNext = slidePrev.nextElementSibling;
@@ -30,12 +56,18 @@ function transformPrev(event) {
   if (classList.clientWidth < liList.length * 260 + Number(activeLi)) {
     activeLi = Number(activeLi) - 260;
 
+    if (classList.clientWidth > liList.length * 260 + Number(activeLi)) {
+      slidePrev.style.color = "blue";
+      slidePrev.classList.remove("slide-prev-hover");
+      slidePrev.removeEventListener("click", transformPrev);
+    }
     slideNext.style.color = "red";
     slideNext.classList.add("slide-next-hover");
+    slideNext.addEventListener("click", transformNext);
   }
 
   classList.style.transition = "transform 1s";
-  classList.style.transform = "translateX(" + Number(activeLi) + "px)";
+  classList.style.transform = "translateX(" + String(activeLi) + "px)";
   classList.setAttribute("data-position", activeLi);
 }
 
